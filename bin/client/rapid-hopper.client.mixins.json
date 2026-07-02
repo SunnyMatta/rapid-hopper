@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "com.sunnymatta.rapidhopper.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ClientMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

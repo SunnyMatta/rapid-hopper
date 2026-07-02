@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "rapid-hopper",
+	"version": "${version}",
+	"name": "Rapid Hopper",
+	"description": "Makes hoppers hop faster",
+	"authors": [
+		"SunnyMatta"
+	],
+	"contact": {
+		"homepage": "https://curseforge.com/minecraft/mc-mods/rapid-hopper/",
+		"sources": "https://github.com/SunnyMatta/rapid-hopper"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rapid-hopper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sunnymatta.rapidhopper.RapidHopper"
+		],
+		"client": [
+			"com.sunnymatta.rapidhopper.client.RapidHopperClient"
+		],
+		"fabric-datagen": [
+			"com.sunnymatta.rapidhopper.client.RapidHopperDataGenerator"
+		]
+	},
+	"mixins": [
+		"rapid-hopper.mixins.json",
+		{
+			"config": "rapid-hopper.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
